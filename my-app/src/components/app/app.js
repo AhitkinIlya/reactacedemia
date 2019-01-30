@@ -6,7 +6,7 @@ import PostStatusFilter from '../post-status-filter'
 import PostList from '../post-list'
 import PostAddForm from '../post-add-form'
 import './app.css'
-import idGenerator from 'react-id-generator'
+import ModalForDelate from '../modal'
 //import  styled from 'styled-components'
 
 // const AppBlock = styled.div`
@@ -20,14 +20,17 @@ import idGenerator from 'react-id-generator'
 export default class App extends Component {
     state = {
         data: [
-        [],
-        {label: "Going to learn React", important: true, id: 'qwqw'},
-        {label: "That is so good", important: false, id: 'wqwq'},
-        {label: "I need a break", important: false, id: 'qwer'}
-        ]
+        {label: "Going to learn React", important: true, like: false, id: 'qwqw'},
+        {label: "That is so good", important: false, like: false, id: 'wqwq'},
+        {label: "I need a break", important: false, like: false, id: 'qwer'}
+        ],
+        term: '',
+        modal: false,
+        idForDelate: '',
+        filter: 'all'
     }
 
-    deleteItem = (id) => { 
+    deleteItem = (id) => {
         this.setState(({data}) => {
             const index = data.findIndex(elem => elem.id === id)
             
@@ -41,12 +44,31 @@ export default class App extends Component {
             }
         })
     }
+    requstForDelate = () => {
+        this.deleteItem(this.state.idForDelate)
+        this.setState({
+            modal: !this.state.modal
+        })
+    }
+
+    cancelDelate = () => {
+        this.setState({
+            modal: !this.state.modal
+        })
+    }
+
+    modalForDelate = (id) => {
+        const forState = {...this.state}
+        forState.idForDelate = id
+        forState.modal = !forState.modal
+        this.setState(forState)
+    }
 
     addItem = (body) => {
         const newItem = {
             label: body,
             important: false,
-            id: idGenerator()
+            id: this.myIdGenerator()
         }
         this.setState(({data}) => {
             const newArray = [...data, newItem]
@@ -56,19 +78,83 @@ export default class App extends Component {
         })
     }
 
+    myIdGenerator() {
+       return Math.random() * 8
+    }
+
+
+     onToggle = (id, e) => {
+          const ans = e.target.tagName === 'SPAN'
+          this.setState(({data}) => {
+              const index = data.findIndex(elem => elem.id === id)
+              const old = data[index]
+              const ev = ans ? {important: !old.important} : {like: !old.like}
+              const newItem = {...old, ...ev}
+
+              const newArray = [...data.slice(0, index), newItem, ...data.slice(index + 1)]
+
+              return {
+                  data: newArray
+              }
+          })
+     }
+
+    searchPost(items, term) {
+        if (term.length === 0) {
+            return items
+        }
+
+        return items.filter( (item) => {
+            return item.label.indexOf(term) > -1
+        })
+    }
+
+    filterPost(items, filter) {
+        if (filter === 'like') {
+            return items.filter(item => item.like)
+        } else {
+            return items
+        }
+    }
+
+    onUpdateSearch = (term) => {
+        this.setState({term})
+    }
+
+    onFilterSelect = (filter) => {
+        this.setState({filter})
+    }
+
     render() {
+        const {data, term, filter} = this.state
+
+        const liked = data.filter(item => item.like).length
+        const allPosts = data.length
+
+        const visiblePosts = this.filterPost(this.searchPost(data, term), filter)
+
         return (
             <div className="app">
-                <AppHeader/>
+                <AppHeader
+                    liked={liked}
+                    allPosts={allPosts}/>
                 <div className="search-panel d-flex">
-                    <SearchPanel/>
-                    <PostStatusFilter/>
+                    <SearchPanel
+                        onUpdateSearch={this.onUpdateSearch}    
+                    />
+                    <PostStatusFilter
+                        filter={filter}
+                        onFilterSelect={this.onFilterSelect}
+                    />
                 </div>
                 <PostList 
-                    posts={this.state.data}
-                    onDelate={this.deleteItem}/>
+                    posts={visiblePosts}
+                    deleteItem={this.modalForDelate}
+                    onToggle={this.onToggle}
+                    />
                 <PostAddForm
-                    onAdd={this.addItem}/> 
+                    onAdd={this.addItem}/>
+                {this.state.modal ? <ModalForDelate modal={this.state.modal} onCancel={this.cancelDelate} onDelate={this.requstForDelate}/> : null}
             </div>
         )
     }
