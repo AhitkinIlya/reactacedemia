@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import Header from '../header';
 import RandomChar from '../randomChar';
-import ItemList from '../itemList';
-import CharDetails from '../charDetails';
+import CharacterPage from '../characterPage'
 import styled from 'styled-components';
+import ErrorMessage from '../errorMessage'
 
 const ContainerDiv = styled.div`
     width: 100%;
@@ -43,16 +43,6 @@ const ColLg5 = styled.div`
         margin-left: 0;
     };
 `
-const ColMd6 = styled.div`
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    @media (min-width: 768px) {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-`
 const Button = styled.button`
     color: #fff;
     text-decoration: none;
@@ -60,6 +50,7 @@ const Button = styled.button`
     background: rgba(5, 8, 48, 1);
     padding: .7em 1.5em;
     outline: none;
+    margin-bottom: 10px;
     :hover {
         background: rgb(232,95,76);
     }
@@ -72,15 +63,30 @@ const Button = styled.button`
 export default class App extends Component {
 
     state = {
-        hide: false
-    }
-    
-    onHide = () => {
-        this.setState({hide: !this.state.hide})
+        showRandomChar: false,
+        error: false
     }
 
+    componentDidCatch() {
+        console.log('error')
+        this.setState({
+            error: true
+        })
+    }
+    
+    toggleRandomChar = () => {
+        this.setState({showRandomChar: !this.state.showRandomChar})
+    }
+
+
     render() {
-        const {hide} = this.state
+        const {showRandomChar} = this.state
+        const remove = showRandomChar ? null : <RandomChar/>
+
+        if (this.state.error) {
+            return <ErrorMessage/>
+        }
+
         return (
             <> 
                 <ContainerDiv>
@@ -89,20 +95,13 @@ export default class App extends Component {
                 <ContainerDiv>
                     <RowDiv>
                         <ColLg5>
-                            <RandomChar hide={hide}/>
+                            {remove}
                         </ColLg5>
                         <ColLg5>
-                            <Button onClick={this.onHide} type="button">Скрыть</Button>
+                            <Button onClick={this.toggleRandomChar} type="button">Скрыть</Button>
                         </ColLg5>
                     </RowDiv>
-                    <RowDiv>
-                        <ColMd6>
-                            <ItemList />
-                        </ColMd6>
-                        <ColMd6>
-                            <CharDetails />
-                        </ColMd6>
-                    </RowDiv>
+                    <CharacterPage/>
                 </ContainerDiv>
             </>
         );

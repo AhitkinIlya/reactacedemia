@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import gotService from '../../services/gotService';
+import Spinner from '../spinner'
 import styled from 'styled-components';
 
 const CharDetailsStyle = styled.div`
@@ -32,29 +34,74 @@ const ListGroupItem = styled.li`
 const Term = styled.span`
     font-weight: bold;
 `
+// const ErrorSelect = styled.span`
+//     color: #fff;
+//     text-align: center;
+//     font-size: 26px;
+// `
 
 export default class CharDetails extends Component {
 
+    gotService = new gotService();
+
+    state = {
+        char: null
+    }
+
+    componentDidMount() {
+        this.updateChar()
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.props.charId !== prevProps.charId) {
+            this.updateChar()
+        }
+    }
+
+    updateChar() {
+        const {charId} = this.props
+        if (!charId) {
+            return;
+        }
+        this.gotService.getCharacter(charId)
+            .then((char) => {
+                this.setState({char})
+            })
+    }
+
     render() {
+
+        // if (!this.state.char) {
+        //     return <ErrorSelect>Please select a character</ErrorSelect>
+        // }
+
+        if (!this.state.char) {
+            return <Spinner/>
+        }
+
+        const {char} = this.state
+        const {name, gender, born, died, culture} = char
+
+
         return (
             <CharDetailsStyle>
-                <h4>John Snow</h4>
+                <h4>{name}</h4>
                 <ListGroup>
                     <ListGroupItem>
                         <Term>Gender</Term>
-                        <span>male</span>
+                        <span>{gender}</span>
                     </ListGroupItem>
                     <ListGroupItem>
                         <Term>Born</Term>
-                        <span>1783</span>
+                        <span>{born}</span>
                     </ListGroupItem>
                     <ListGroupItem>
                         <Term>Died</Term>
-                        <span>1820</span>
+                        <span>{died}</span>
                     </ListGroupItem>
                     <ListGroupItem>
                         <Term>Culture</Term>
-                        <span>First</span>
+                        <span>{culture}</span>
                     </ListGroupItem>
                 </ListGroup>
             </CharDetailsStyle>

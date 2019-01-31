@@ -44,7 +44,8 @@ export default class gotService {
             gender: char.gender,
             born: char.born,
             died: char.die,
-            culture: char.culture
+            culture: char.culture,
+            url: char.url
         }
     }
 
