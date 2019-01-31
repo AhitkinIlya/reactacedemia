@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
+import gotService from '../../services/gotService';
+import Spinner from '../spinner';
+import ErrorMessage from '../errorMessage'
 
 const ListGroup = styled.ul`
     display: flex;
@@ -36,31 +39,81 @@ const Term = styled.span`
 `
 
 export default class RandomChar extends Component {
+    constructor() {
+        super()
+        this.updateChar()
+    }
+
+    gotService = new gotService();
+    
+    state = {
+        char: {},
+        loading: true,
+        error: false
+    }
+
+    onCharLoaded = (char) => {
+        this.setState({
+            char,
+            loading: false
+        })
+    }
+
+    onError = (err) => {
+        this.setState({
+            error: true,
+            loading: false
+        })
+    }
+
+    updateChar() {
+        const id = Math.floor(Math.random() * 140 + 25);
+        this.gotService.getCharacter(id)
+            .then(this.onCharLoaded)
+            .catch(this.onError)
+    }
 
     render() {
 
+        const { char, loading, error } = this.state
+
+        const errorMessage = error ? <ErrorMessage/> : null
+        const spinner = loading ? <Spinner/> : null
+        const content = !(loading || error) ? <View char={char} /> : null
+        console.log(this.props.hide)
         return (
-            <RandomBlock>
-                <h4>Random Character: John</h4>
-                <ListGroup>
-                    <ListGroupItem>
-                        <Term>Gender </Term>
-                        <span>male</span>
-                    </ListGroupItem>
-                    <ListGroupItem>
-                        <Term>Born </Term>
-                        <span>11.03.1039</span>
-                    </ListGroupItem>
-                    <ListGroupItem>
-                        <Term>Died </Term>
-                        <span>13.09.1089</span>
-                    </ListGroupItem>
-                    <ListGroupItem>
-                        <Term>Culture </Term>
-                        <span>Anarchy</span>
-                    </ListGroupItem>
-                </ListGroup>
+            <RandomBlock style={{opacity: this.props.hide ? 0 : 1}}>
+                {errorMessage}
+                {spinner}
+                {content}
             </RandomBlock>
         );
     }
+}
+
+const View = ({char}) => {
+    const {name, gender, born, died, culture} = char
+    return (
+        <>
+            <h4>Random Character: {name}</h4>
+                <ListGroup>
+                    <ListGroupItem>
+                        <Term>Gender </Term>
+                        <span>{gender}</span>
+                    </ListGroupItem>
+                    <ListGroupItem>
+                        <Term>Born </Term>
+                        <span>{born}</span>
+                    </ListGroupItem>
+                    <ListGroupItem>
+                        <Term>Died </Term>
+                        <span>{died}</span>
+                    </ListGroupItem>
+                    <ListGroupItem>
+                        <Term>Culture </Term>
+                        <span>{culture}</span>
+                    </ListGroupItem>
+                </ListGroup>
+        </>
+    )
 }

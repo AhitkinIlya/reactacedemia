@@ -11,11 +11,6 @@ const CharDetailsStyle = styled.div`
         text-align: center;
     }
 `;
-const SelectError = styled.div`
-    color: #fff;
-    text-align: center;
-    font-size: 26px;
-`;
 const ListGroup = styled.ul`
     display: flex;
     flex-direction: column;
