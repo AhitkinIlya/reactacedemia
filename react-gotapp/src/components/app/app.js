@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import Header from '../header';
-import RandomChar from '../randomChar';
-import CharacterPage from '../characterPage'
+import RandomItem from '../randomItem';
+import Page from '../pages';
 import styled from 'styled-components';
-import ErrorMessage from '../errorMessage'
+import ErrorMessage from '../errorMessage';
+import gotService from '../../services/gotService';
 
 const ContainerDiv = styled.div`
     width: 100%;
@@ -43,6 +44,16 @@ const ColLg5 = styled.div`
         margin-left: 0;
     };
 `
+// const ColMd6 = styled.div`
+//     position: relative;
+//     width: 100%;
+//     padding-right: 15px;
+//     padding-left: 15px;
+//     @media (min-width: 768px) {
+//         flex: 0 0 50%;
+//         max-width: 50%;
+//     }
+// `
 const Button = styled.button`
     color: #fff;
     text-decoration: none;
@@ -61,9 +72,10 @@ const Button = styled.button`
 
 
 export default class App extends Component {
+    gotService = new gotService();
 
     state = {
-        showRandomChar: false,
+        showRandomItem: false,
         error: false
     }
 
@@ -75,13 +87,13 @@ export default class App extends Component {
     }
     
     toggleRandomChar = () => {
-        this.setState({showRandomChar: !this.state.showRandomChar})
+        this.setState({showRandomItem: !this.state.showRandomItem})
     }
 
 
     render() {
-        const {showRandomChar} = this.state
-        const remove = showRandomChar ? null : <RandomChar/>
+        const {showRandomItem} = this.state
+        const remove = showRandomItem ? null : <RandomItem/>
 
         if (this.state.error) {
             return <ErrorMessage/>
@@ -101,7 +113,7 @@ export default class App extends Component {
                             <Button onClick={this.toggleRandomChar} type="button">Скрыть</Button>
                         </ColLg5>
                     </RowDiv>
-                    <CharacterPage/>
+                    <Page/>
                 </ContainerDiv>
             </>
         );
