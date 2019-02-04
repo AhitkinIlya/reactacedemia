@@ -30,6 +30,7 @@ const ListGroupItem = styled.li`
     border-right: 0;
     border-left: 0;
     border-radius: 0;
+    width: 100%;
 `;
 const Term = styled.span`
     font-weight: bold;
@@ -44,6 +45,7 @@ const Term = styled.span`
     text-align: center;
     margin-bottom: 15px;
  `
+
 
 const Field = ({item, field, label}) => {
     return(

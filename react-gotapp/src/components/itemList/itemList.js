@@ -23,6 +23,12 @@ const ListGroupItem = styled.li`
     border-radius: 0;
 `;
 
+const Title = styled.h3`
+    color: #a3c7cf;
+    text-align: center;
+    margin-bottom: 15px;
+`;
+
 export default class ItemList extends Component {
 
     state = {
@@ -68,9 +74,12 @@ export default class ItemList extends Component {
         const items = this.renderItems(itemList)
 
         return (
-            <ListGroup>
-                {items}
-            </ListGroup>
+            <>
+                <Title>{this.props.title}</Title>
+                <ListGroup>
+                    {items}
+                </ListGroup>
+            </>
         );
     }
 }

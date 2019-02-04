@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import Header from '../header';
 import RandomItem from '../randomItem';
-import Page from '../pages';
+import {CharacterPage, HousePage, BookPage, BooksItem} from '../pages';
 import styled from 'styled-components';
 import ErrorMessage from '../errorMessage';
 import gotService from '../../services/gotService';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+
 
 const ContainerDiv = styled.div`
     width: 100%;
@@ -100,22 +102,32 @@ export default class App extends Component {
         }
 
         return (
-            <> 
-                <ContainerDiv>
-                    <Header />
-                </ContainerDiv>
-                <ContainerDiv>
-                    <RowDiv>
-                        <ColLg5>
-                            {remove}
-                        </ColLg5>
-                        <ColLg5>
-                            <Button onClick={this.toggleRandomChar} type="button">Скрыть</Button>
-                        </ColLg5>
-                    </RowDiv>
-                    <Page/>
-                </ContainerDiv>
-            </>
+            <Router>
+                <div> 
+                    <ContainerDiv>
+                        <Header />
+                    </ContainerDiv>
+                    <ContainerDiv>
+                        <RowDiv>
+                            <ColLg5>
+                                {remove}
+                            </ColLg5>
+                            <ColLg5>
+                                <Button onClick={this.toggleRandomChar} type="button">Скрыть</Button>
+                            </ColLg5>
+                        </RowDiv>
+                        <Route path='/characters/' component={CharacterPage}/>
+                        <Route path='/houses/' component={HousePage}/>
+                        <Route path='/books/'  component={BookPage}/>
+                        <Route path='/books/:id' render={
+                            ({match}) => {
+                                const {id} = match.params
+                                return <BooksItem bookId={id}/>
+                            }
+                        }/>
+                    </ContainerDiv>
+                </div>
+            </Router>
         );
     }
 };
