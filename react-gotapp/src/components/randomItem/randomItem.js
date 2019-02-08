@@ -32,7 +32,7 @@ const RandomBlock = styled.div`
     margin-bottom: 40px;
     h4 {
         text-align: center;
-    }
+    }   
 `
 const Term = styled.span`
     font-weight: bold;

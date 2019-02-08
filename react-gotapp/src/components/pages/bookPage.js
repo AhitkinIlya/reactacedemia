@@ -5,7 +5,7 @@ import gotService from '../../services/gotService';
 import {withRouter} from 'react-router-dom';
 
 
-class bookPage extends Component {
+class BookPage extends Component {
 
     gotService = new gotService();
 
@@ -40,4 +40,5 @@ class bookPage extends Component {
     }
 }
 
-export default withRouter(bookPage)
+export default withRouter(BookPage)
+export {BookPage}

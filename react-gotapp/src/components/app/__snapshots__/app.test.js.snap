@@ -1,0 +1,966 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing <App/> Header have rendered correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <App />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": <div>
+        <ForwardRef>
+          <Header />
+        </ForwardRef>
+        <ForwardRef>
+          <ForwardRef>
+            <ForwardRef>
+              <RandomChar />
+            </ForwardRef>
+            <ForwardRef>
+              <ForwardRef
+                onClick={[Function]}
+                type="button"
+              >
+                Скрыть
+              </ForwardRef>
+            </ForwardRef>
+          </ForwardRef>
+          <Route
+            component={[Function]}
+            path="/characters"
+          />
+          <Route
+            component={[Function]}
+            path="/houses"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/books/"
+          />
+          <Route
+            path="/books/:id"
+            render={[Function]}
+          />
+        </ForwardRef>
+      </div>,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <ForwardRef>
+            <Header />
+          </ForwardRef>,
+          <ForwardRef>
+            <ForwardRef>
+              <ForwardRef>
+                <RandomChar />
+              </ForwardRef>
+              <ForwardRef>
+                <ForwardRef
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Скрыть
+                </ForwardRef>
+              </ForwardRef>
+            </ForwardRef>
+            <Route
+              component={[Function]}
+              path="/characters"
+            />
+            <Route
+              component={[Function]}
+              path="/houses"
+            />
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/books/"
+            />
+            <Route
+              path="/books/:id"
+              render={[Function]}
+            />
+          </ForwardRef>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <Header />,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-chPdSV",
+              "isStatic": true,
+              "rules": Array [
+                "
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    @media (min-width: 576px) {
+        max-width: 540px;
+    };
+    @media (min-width: 768px) {
+        max-width: 720px;
+    };
+    @media (min-width: 992px) {
+        max-width: 960px;
+    };
+    @media (min-width: 1200px) {
+        max-width: 1140px;
+    };
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-chPdSV",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <ForwardRef>
+                <ForwardRef>
+                  <RandomChar />
+                </ForwardRef>
+                <ForwardRef>
+                  <ForwardRef
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    Скрыть
+                  </ForwardRef>
+                </ForwardRef>
+              </ForwardRef>,
+              <Route
+                component={[Function]}
+                path="/characters"
+              />,
+              <Route
+                component={[Function]}
+                path="/houses"
+              />,
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/books/"
+              />,
+              <Route
+                path="/books/:id"
+                render={[Function]}
+              />,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": Array [
+                  <ForwardRef>
+                    <RandomChar />
+                  </ForwardRef>,
+                  <ForwardRef>
+                    <ForwardRef
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      Скрыть
+                    </ForwardRef>
+                  </ForwardRef>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": <RandomChar />,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {},
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  "type": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-kGXeez",
+                      "isStatic": true,
+                      "rules": Array [
+                        "
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    @media (min-width: 992px) {
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+    };
+    @media (min-width: 992px) {
+        margin-left: 0;
+    };
+",
+                      ],
+                    },
+                    "displayName": "styled.div",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-kGXeez",
+                    "target": "div",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  },
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": <ForwardRef
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      Скрыть
+                    </ForwardRef>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": "Скрыть",
+                      "onClick": [Function],
+                      "type": "button",
+                    },
+                    "ref": null,
+                    "rendered": "Скрыть",
+                    "type": Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-kpOJdX",
+                        "isStatic": true,
+                        "rules": Array [
+                          "
+    color: #fff;
+    text-decoration: none;
+    user-select: none;
+    background: rgba(5, 8, 48, 1);
+    padding: .7em 1.5em;
+    outline: none;
+    margin-bottom: 10px;
+    :hover {
+        background: rgb(232,95,76);
+    }
+    :active {
+        background: rgb(152,15,0);
+    }
+",
+                        ],
+                      },
+                      "displayName": "styled.button",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-kpOJdX",
+                      "target": "button",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    },
+                  },
+                  "type": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-kGXeez",
+                      "isStatic": true,
+                      "rules": Array [
+                        "
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    @media (min-width: 992px) {
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+    };
+    @media (min-width: 992px) {
+        margin-left: 0;
+    };
+",
+                      ],
+                    },
+                    "displayName": "styled.div",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-kGXeez",
+                    "target": "div",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  },
+                },
+              ],
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-kgoBCf",
+                  "isStatic": true,
+                  "rules": Array [
+                    "
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+",
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-kgoBCf",
+                "target": "div",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              },
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "path": "/characters",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "path": "/houses",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "exact": true,
+                "path": "/books/",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "path": "/books/:id",
+                "render": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-chPdSV",
+              "isStatic": true,
+              "rules": Array [
+                "
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    @media (min-width: 576px) {
+        max-width: 540px;
+    };
+    @media (min-width: 768px) {
+        max-width: 720px;
+    };
+    @media (min-width: 992px) {
+        max-width: 960px;
+    };
+    @media (min-width: 1200px) {
+        max-width: 1140px;
+    };
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-chPdSV",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          },
+        },
+      ],
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <div>
+          <ForwardRef>
+            <Header />
+          </ForwardRef>
+          <ForwardRef>
+            <ForwardRef>
+              <ForwardRef>
+                <RandomChar />
+              </ForwardRef>
+              <ForwardRef>
+                <ForwardRef
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Скрыть
+                </ForwardRef>
+              </ForwardRef>
+            </ForwardRef>
+            <Route
+              component={[Function]}
+              path="/characters"
+            />
+            <Route
+              component={[Function]}
+              path="/houses"
+            />
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/books/"
+            />
+            <Route
+              path="/books/:id"
+              render={[Function]}
+            />
+          </ForwardRef>
+        </div>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <ForwardRef>
+              <Header />
+            </ForwardRef>,
+            <ForwardRef>
+              <ForwardRef>
+                <ForwardRef>
+                  <RandomChar />
+                </ForwardRef>
+                <ForwardRef>
+                  <ForwardRef
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    Скрыть
+                  </ForwardRef>
+                </ForwardRef>
+              </ForwardRef>
+              <Route
+                component={[Function]}
+                path="/characters"
+              />
+              <Route
+                component={[Function]}
+                path="/houses"
+              />
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/books/"
+              />
+              <Route
+                path="/books/:id"
+                render={[Function]}
+              />
+            </ForwardRef>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": <Header />,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-chPdSV",
+                "isStatic": true,
+                "rules": Array [
+                  "
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    @media (min-width: 576px) {
+        max-width: 540px;
+    };
+    @media (min-width: 768px) {
+        max-width: 720px;
+    };
+    @media (min-width: 992px) {
+        max-width: 960px;
+    };
+    @media (min-width: 1200px) {
+        max-width: 1140px;
+    };
+",
+                ],
+              },
+              "displayName": "styled.div",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-chPdSV",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            },
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <ForwardRef>
+                  <ForwardRef>
+                    <RandomChar />
+                  </ForwardRef>
+                  <ForwardRef>
+                    <ForwardRef
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      Скрыть
+                    </ForwardRef>
+                  </ForwardRef>
+                </ForwardRef>,
+                <Route
+                  component={[Function]}
+                  path="/characters"
+                />,
+                <Route
+                  component={[Function]}
+                  path="/houses"
+                />,
+                <Route
+                  component={[Function]}
+                  exact={true}
+                  path="/books/"
+                />,
+                <Route
+                  path="/books/:id"
+                  render={[Function]}
+                />,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": Array [
+                    <ForwardRef>
+                      <RandomChar />
+                    </ForwardRef>,
+                    <ForwardRef>
+                      <ForwardRef
+                        onClick={[Function]}
+                        type="button"
+                      >
+                        Скрыть
+                      </ForwardRef>
+                    </ForwardRef>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": <RandomChar />,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {},
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    "type": Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-kGXeez",
+                        "isStatic": true,
+                        "rules": Array [
+                          "
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    @media (min-width: 992px) {
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+    };
+    @media (min-width: 992px) {
+        margin-left: 0;
+    };
+",
+                        ],
+                      },
+                      "displayName": "styled.div",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-kGXeez",
+                      "target": "div",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    },
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": <ForwardRef
+                        onClick={[Function]}
+                        type="button"
+                      >
+                        Скрыть
+                      </ForwardRef>,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "children": "Скрыть",
+                        "onClick": [Function],
+                        "type": "button",
+                      },
+                      "ref": null,
+                      "rendered": "Скрыть",
+                      "type": Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-kpOJdX",
+                          "isStatic": true,
+                          "rules": Array [
+                            "
+    color: #fff;
+    text-decoration: none;
+    user-select: none;
+    background: rgba(5, 8, 48, 1);
+    padding: .7em 1.5em;
+    outline: none;
+    margin-bottom: 10px;
+    :hover {
+        background: rgb(232,95,76);
+    }
+    :active {
+        background: rgb(152,15,0);
+    }
+",
+                          ],
+                        },
+                        "displayName": "styled.button",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-kpOJdX",
+                        "target": "button",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      },
+                    },
+                    "type": Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-kGXeez",
+                        "isStatic": true,
+                        "rules": Array [
+                          "
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    @media (min-width: 992px) {
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+    };
+    @media (min-width: 992px) {
+        margin-left: 0;
+    };
+",
+                        ],
+                      },
+                      "displayName": "styled.div",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-kGXeez",
+                      "target": "div",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    },
+                  },
+                ],
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-kgoBCf",
+                    "isStatic": true,
+                    "rules": Array [
+                      "
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+",
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-kgoBCf",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                },
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": [Function],
+                  "path": "/characters",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": [Function],
+                  "path": "/houses",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": [Function],
+                  "exact": true,
+                  "path": "/books/",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "path": "/books/:id",
+                  "render": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-chPdSV",
+                "isStatic": true,
+                "rules": Array [
+                  "
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    @media (min-width: 576px) {
+        max-width: 540px;
+    };
+    @media (min-width: 768px) {
+        max-width: 720px;
+    };
+    @media (min-width: 992px) {
+        max-width: 960px;
+    };
+    @media (min-width: 1200px) {
+        max-width: 1140px;
+    };
+",
+                ],
+              },
+              "displayName": "styled.div",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-chPdSV",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            },
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

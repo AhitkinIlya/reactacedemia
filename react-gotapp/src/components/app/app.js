@@ -116,9 +116,9 @@ export default class App extends Component {
                                 <Button onClick={this.toggleRandomChar} type="button">Скрыть</Button>
                             </ColLg5>
                         </RowDiv>
-                        <Route path='/characters/' component={CharacterPage}/>
-                        <Route path='/houses/' component={HousePage}/>
-                        <Route path='/books/'  component={BookPage}/>
+                        <Route path='/characters' component={CharacterPage}/>
+                        <Route path='/houses' component={HousePage}/>
+                        <Route path='/books/' exact  component={BookPage}/>
                         <Route path='/books/:id' render={
                             ({match}) => {
                                 const {id} = match.params
