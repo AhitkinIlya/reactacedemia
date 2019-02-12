@@ -1,0 +1,55 @@
+.mainText {
+    text-align: center;
+}
+img {
+    margin-right: 6px;
+    margin-left: 6px;
+}
+.makes {
+    font-family: Merienda;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 24px;
+
+    color: #FFFFFF;
+
+    margin-top: 34.7px;
+}
+.try {
+    font-family: Merienda;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 24px;
+
+    color: #FFFFFF;
+
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 18px;
+}
+button {
+    border: 1.5px solid #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px !important;
+    background: rgb(0, 0, 0, 0);
+
+    width: 120px;
+    height: 30px;
+
+    outline: none !important;
+}
+button:hover {
+    background: rgb(204, 196, 203, 0.1);
+}
+span {
+    font-family: Merienda;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 14px;
+
+    color: #FFFFFF;
+}

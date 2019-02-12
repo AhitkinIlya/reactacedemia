@@ -1,0 +1,21 @@
+.footer {
+    background: #FFFFFF;
+    text-align: center;
+    font-family: Merienda;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    padding-bottom: 20.7px;
+}
+.footer > .menu > a {
+    color: #000000;
+    margin-right: 20px;
+    margin-left: 20px;
+    font-size: 12px;
+}
+.footer > .menu {
+    margin-right: 110px;
+    padding-top: 30px;
+    margin-bottom: 10px;
+}
+

@@ -1,0 +1,32 @@
+.about {
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 85px;
+}
+.aboutTitle {
+    font-family: Merienda;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 24px;
+
+    margin-bottom: 12px;
+
+    color: #000;
+}
+.aboutText {
+    width: 589px;
+    height: 223px;
+
+    font-family: Merienda;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 14px;
+
+
+    color: #000000;
+
+    margin-top: 40.7px;
+    margin-left: 465px;
+}
