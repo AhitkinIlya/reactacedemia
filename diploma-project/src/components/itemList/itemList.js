@@ -10,7 +10,8 @@ export default class ItemList extends Component {
     }
 
     componentDidMount() {
-        this.getDB.getCoffee() // or this.getDB.getGoods
+        const {getData} = this.props
+        getData() // or this.getDB.getGoods
             .then((listItems) => {
                 this.setState({
                     listItems

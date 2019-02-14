@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import './mainText.css'
 
 const MainText = () => {
@@ -9,7 +10,7 @@ const MainText = () => {
             <img src="/logo/Line.png" alt="logo"/>
             <p className="makes">We makes every day full of energy and taste</p>
             <p className="try">Want to try our beans?</p>
-            <button><span>More</span></button>
+            <Link to='/coffee/'><button><span>More</span></button></Link>
         </div>
     )
 }

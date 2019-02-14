@@ -35,6 +35,8 @@
     margin-left: 36px;
     margin-right: 36px;
 
+    cursor: pointer;
+
 }
 .bestItem > img {
     width: 151px;

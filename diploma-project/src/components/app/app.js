@@ -1,20 +1,22 @@
 import React, {Component} from 'react';
-import Header from '../header/header'
-import About from '../about/about'
-import BestSellers from '../bestSellers/bestSellers'
+import BestPage from '../pages/bestPage/bestPage'
+import CoffeePage from '../pages/coffeePage/coffeePage'
+import PleasurePage from '../pages/pleasurePage/pleasurePage'
 import Footer from '../footer/footer'
-import ItemList from '../itemList/itemList'
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 export default class App extends Component {
     
     render() {
         return (
-            <>
-                <Header/>
-                <About/>
-                <BestSellers/> {/* Пока pages у меня нет можете здесь потестить компонент ItemList на наличие верстки и товаров из бд */} 
-                <Footer/>
-            </>
+            <Router>
+                <>
+                    <Route path='/' exact component={BestPage}/>
+                    <Route path='/coffee' component={CoffeePage}/>
+                    <Route path='/goods' component={PleasurePage}/>
+                    <Footer/>
+                </>
+            </Router>
         )
     }
 }

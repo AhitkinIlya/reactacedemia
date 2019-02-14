@@ -3,6 +3,19 @@
     padding-top: 80px;
     padding-bottom: 85px;
 }
+.aboutCoffee {
+    width: 370px;
+    height: 232px;
+    padding-top: 25px;
+    text-align: center;
+    margin-left: 30px;
+    padding-left: 20px;
+}
+.aboutParent {
+    display: flex;
+    justify-content: center;
+    margin-top: 55px;
+}
 .aboutTitle {
     font-family: Merienda;
     font-style: normal;
@@ -29,4 +42,25 @@
 
     margin-top: 40.7px;
     margin-left: 465px;
+}
+.aboutTextCoffee {
+    font-family: Merienda;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 14px;
+    color: #000000;
+    text-align: center;
+    width: 346px;
+
+    margin-top: 25.7px;
+
+}
+.imageAbout {
+    width: 272px;
+    height: 400px;
+    margin-left: 30px;
+}
+.line {
+    margin-left: 620px;
 }

@@ -6,10 +6,10 @@ import './header.css'
 export default class Header extends Component {
     render() {
         return(
-            <div className="main">
+            <div className={this.props.classStyle}>
                 <Menu color={'Group.png'}/>
-                <h3>Everything You Love About Coffee</h3>
-                <MainText/>
+                <h3 className={!this.props.pageCoffe ? "title" : "titleCoffe"}>{this.props.title}</h3>
+                {this.props.mainText !== undefined ? <MainText/> : null}
             </div>
         )
     }
