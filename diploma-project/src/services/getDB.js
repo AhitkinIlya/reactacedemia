@@ -1,5 +1,5 @@
 export default class getDB {
-    getResource = async (item) => {
+    getResource = async () => {
         const res = await fetch('/db.json')
         return await res.json()
             
@@ -17,10 +17,18 @@ export default class getDB {
         const res = await this.getResource()
         return res.goods.map(this._transformGoods)
     }
+    getCoffeeDetails = async (name) => {
+        const res = await this.getResource()
+        const res1 = res.coffee.map(this._transformCoffee)
+        console.log(res1)
+        return res1.filter((item) => {
+            return item.id === name
+        })
+    }
 
     _transformBest = (best) => {
         return {
-            id: Math.floor(Math.random() + 100) + best.name,
+            id: best.name.replace(/ .*/,''),
             name: best.name,
             url: best.url,
             price: best.price
@@ -28,7 +36,7 @@ export default class getDB {
     }
     _transformCoffee = (coffee) => {
         return {
-            id: Math.floor(Math.random() + 100) + coffee.name,
+            id: coffee.name.replace(/ .*/,''),
             name: coffee.name,
             country: coffee.country,
             url: coffee.url,

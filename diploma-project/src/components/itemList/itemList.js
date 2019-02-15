@@ -1,12 +1,15 @@
 import React, {Component} from 'react'
 import './itemList.css'
 import getDB from '../../services/getDB'
+import ErrorMessage from '../errorMessage/errorMessage';
+import Spinner from '../spinner/spinner'
 
 export default class ItemList extends Component {
     getDB = new getDB();
 
     state = {
-        listItems: null
+        listItems: '',
+        error: false
     }
 
     componentDidMount() {
@@ -16,6 +19,9 @@ export default class ItemList extends Component {
                 this.setState({
                     listItems
                 })
+            })
+            .catch((error) => {
+                this.setState({error: true})
             })
     }
 
@@ -27,7 +33,9 @@ export default class ItemList extends Component {
                 <div
                     key={id}
                     className="item">
-                    <img src={url} alt="item"/>
+                    <img src={url} alt="item"
+                    onClick={this.props.coffePage 
+                    ? () => this.props.onItemSelected(id) : null}/>
                     <span>{name}</span>
                     {country !== undefined ? <span className="country">{country}</span> : null}
                     <small>{price}</small>
@@ -39,14 +47,17 @@ export default class ItemList extends Component {
 
     render() {
         const {listItems} = this.state
-        if(!listItems) {
-            return null
+        if(listItems === '' && !this.state.error) {
+            return <Spinner/>
         }
         const items = this.props.coffePage ? this.renderList(this.props.visibleItem(listItems)) : this.renderList(listItems)
         return (
             <div className="containerList">
                 <div className="itemList">
-                    {items}
+                    {this.state.error ? <ErrorMessage
+                                                error="errorItem" 
+                                                errorText="errorTextItem"
+                                                    errorMessage="Ошибка при загрузке данных"/> : items}
                 </div>
             </div>
         )

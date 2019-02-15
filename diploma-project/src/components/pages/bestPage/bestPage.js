@@ -3,6 +3,7 @@ import About from '../../about/about'
 import Header from '../../header/header'
 import BestSellers from '../../bestSellers/bestSellers'
 import './bestPage.css'
+import {withRouter} from 'react-router-dom'
 
 class BestPage extends Component {
     render() {
@@ -16,10 +17,13 @@ class BestPage extends Component {
                 <About title={`About us`}
                        about={true}
                        text={text}/>
-                <BestSellers/>
+                <BestSellers 
+                        onItemSelected = {(id) => {
+                            this.props.history.push(`/coffee/${id}`)
+                        }}/>
             </>
         )
     }
 }
 
-export default BestPage
+export default withRouter(BestPage)

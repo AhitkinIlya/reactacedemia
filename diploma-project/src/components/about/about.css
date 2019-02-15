@@ -15,6 +15,18 @@
     display: flex;
     justify-content: center;
     margin-top: 55px;
+
+}
+.da {
+    font-family: Merienda;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 14px;
+
+    margin-top: 25px;
+
+    color: #000000;
 }
 .aboutTitle {
     font-family: Merienda;
@@ -61,6 +73,38 @@
     height: 400px;
     margin-left: 30px;
 }
+.imageIt {
+    width: 392px;
+    height: 355px;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.25);
+    margin-left: 30px;
+    border: 0;
+    margin-bottom: 25px;
+}
 .line {
     margin-left: 620px;
+}
+
+.aboutIt {
+    text-align: justify;
+    font-family: Merienda;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 14px;
+
+    color: #000000;
+
+    margin-top: 20px;
+}
+.textCoffee {
+    color: #000000 !important;
+    font-weight: normal !important;
+}
+.priceCoffee {
+    font-size: 25px;
+    font-weight: bold;
+}
+.priceCoffee > b {
+    font-size: 14px;
 }

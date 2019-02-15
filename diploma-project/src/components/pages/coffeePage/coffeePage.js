@@ -6,6 +6,7 @@ import getDB from '../../../services/getDB'
 import './coffePage.css'
 import SearchItem from '../../searchItem/searchItem';
 import Filter from '../../filter/filter';
+import {withRouter} from 'react-router-dom'
 
 class CoffeePage extends Component {
     data = new getDB()
@@ -54,8 +55,8 @@ class CoffeePage extends Component {
     }
 
     render() {
-    const {filter} = this.state
-    const text = <p className="aboutTextCoffee">Extremity sweetness difficult behavior he of. On disposal of as landlord horrible.<br/><br/> Afraid at highly months do things on at. Situation<br/> recommend objection do intention<br/> so questions.<br/> As greatly removed calling pleased improve an. Last ask him cold feel<br/> met spot shy want. Children me laughing we prospect answered followed. At it went<br/> is song that held help face.</p>    
+        const {filter} = this.state
+        const text = <p className="aboutTextCoffee">Extremity sweetness difficult behavior he of. On disposal of as landlord horrible.<br/><br/> Afraid at highly months do things on at. Situation<br/> recommend objection do intention<br/> so questions.<br/> As greatly removed calling pleased improve an. Last ask him cold feel<br/> met spot shy want. Children me laughing we prospect answered followed. At it went<br/> is song that held help face.</p>    
         return (
             <>
                 <Header classStyle="ourCoffee"
@@ -64,7 +65,8 @@ class CoffeePage extends Component {
                 <About about={false}
                        src="/img/ourCoffee.png"
                         title={`About our beans`}
-                       text={text}/>
+                       text={text}
+                       imageAbout="imageAbout"/>
                 <div className="filterItem">
                     <SearchItem onUpdateSearch={this.onUpdateSearch}/>
                     <Filter filter={filter}
@@ -72,10 +74,13 @@ class CoffeePage extends Component {
                 </div>
                 <ItemList getData={() => this.data.getCoffee()}
                           visibleItem={(data) => this.visibleItem(data)}
-                          coffePage={true}/>
+                          coffePage={true}
+                          onItemSelected = {(id) => {
+                            this.props.history.push(id)
+                        }} />
             </>
         )
     }
 }
 
-export default CoffeePage
+export default withRouter(CoffeePage)

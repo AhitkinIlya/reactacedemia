@@ -16,14 +16,19 @@ class About extends Component {
                 : 
                 <>
                     <div className="aboutParent">
-                        <img className="imageAbout" src={this.props.src} alt="imageAbout"/>
+                        <img className={this.props.imageAbout}  src={this.props.src} alt="imageAbout"/>
                         <div className="aboutCoffee">
                             <h4 className="aboutTitle">{this.props.title}</h4>
                             <Grain/>
-                            {this.props.text}
+                            {this.props.text !== undefined ? <div className="da">{this.props.text}</div>
+                                : <div className="aboutIt">
+                                    <p className="countryCoffee"><b>Country:</b> {this.props.item.country}</p>
+                                    <span className="textCoffee"><b>Description:</b> {this.props.item.description}</span><br/><br/>
+                                    <small className="priceCoffee"><b>Price:</b> {this.props.item.price}</small>
+                                  </div>}
                         </div>
                     </div>
-                    <img className="line" src="/img/lineAbout.png" alt="line"/>
+                    { this.props.text !== undefined ? <img className="line" src="/img/lineAbout.png" alt="line"/>: null}
                 </>}
             </>
         )
