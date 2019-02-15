@@ -17,7 +17,7 @@ class PleasurePage extends Component {
                         src="/img/goods.png"
                         title={`About our goods`}
                         text={text}/>
-                <ItemList getData={() => this.data.getGoods()}
+                <ItemList getData={this.data.getGoods}
                           coffePage={false}/>
             </>
         )

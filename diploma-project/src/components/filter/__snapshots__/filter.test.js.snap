@@ -1,0 +1,234 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing <Filter/> Testing snapshot, state and props Filter have rendered correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Filter
+    filter="Brazilia"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <span
+          className="filter"
+        >
+          Or filter
+        </span>,
+        Array [
+          <button
+            className="unActive"
+            onClick={[Function]}
+            type="button"
+          >
+            Brazil
+          </button>,
+          <button
+            className="unActive"
+            onClick={[Function]}
+            type="button"
+          >
+            Kenya
+          </button>,
+          <button
+            className="unActive"
+            onClick={[Function]}
+            type="button"
+          >
+            Columbia
+          </button>,
+        ],
+      ],
+      "className": "group",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Or filter",
+          "className": "filter",
+        },
+        "ref": null,
+        "rendered": "Or filter",
+        "type": "span",
+      },
+      Object {
+        "instance": null,
+        "key": "brazil",
+        "nodeType": "host",
+        "props": Object {
+          "children": "Brazil",
+          "className": "unActive",
+          "onClick": [Function],
+          "type": "button",
+        },
+        "ref": null,
+        "rendered": "Brazil",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": "kenya",
+        "nodeType": "host",
+        "props": Object {
+          "children": "Kenya",
+          "className": "unActive",
+          "onClick": [Function],
+          "type": "button",
+        },
+        "ref": null,
+        "rendered": "Kenya",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": "columbia",
+        "nodeType": "host",
+        "props": Object {
+          "children": "Columbia",
+          "className": "unActive",
+          "onClick": [Function],
+          "type": "button",
+        },
+        "ref": null,
+        "rendered": "Columbia",
+        "type": "button",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <span
+            className="filter"
+          >
+            Or filter
+          </span>,
+          Array [
+            <button
+              className="unActive"
+              onClick={[Function]}
+              type="button"
+            >
+              Brazil
+            </button>,
+            <button
+              className="unActive"
+              onClick={[Function]}
+              type="button"
+            >
+              Kenya
+            </button>,
+            <button
+              className="unActive"
+              onClick={[Function]}
+              type="button"
+            >
+              Columbia
+            </button>,
+          ],
+        ],
+        "className": "group",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Or filter",
+            "className": "filter",
+          },
+          "ref": null,
+          "rendered": "Or filter",
+          "type": "span",
+        },
+        Object {
+          "instance": null,
+          "key": "brazil",
+          "nodeType": "host",
+          "props": Object {
+            "children": "Brazil",
+            "className": "unActive",
+            "onClick": [Function],
+            "type": "button",
+          },
+          "ref": null,
+          "rendered": "Brazil",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": "kenya",
+          "nodeType": "host",
+          "props": Object {
+            "children": "Kenya",
+            "className": "unActive",
+            "onClick": [Function],
+            "type": "button",
+          },
+          "ref": null,
+          "rendered": "Kenya",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": "columbia",
+          "nodeType": "host",
+          "props": Object {
+            "children": "Columbia",
+            "className": "unActive",
+            "onClick": [Function],
+            "type": "button",
+          },
+          "ref": null,
+          "rendered": "Columbia",
+          "type": "button",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

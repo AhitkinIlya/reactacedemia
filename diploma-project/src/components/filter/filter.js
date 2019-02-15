@@ -2,9 +2,6 @@ import React, {Component} from 'react'
 import './filter.css'
 
 export default class Filter extends Component {
-    state = {
-
-    }
 
     buttons = [
         {name: 'brazil', label: 'Brazil'},

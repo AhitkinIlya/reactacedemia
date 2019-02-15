@@ -72,7 +72,7 @@ class CoffeePage extends Component {
                     <Filter filter={filter}
                             onFilterSelect={this.onFilterSelect}/>
                 </div>
-                <ItemList getData={() => this.data.getCoffee()}
+                <ItemList getData={this.data.getCoffee}
                           visibleItem={(data) => this.visibleItem(data)}
                           coffePage={true}
                           onItemSelected = {(id) => {
