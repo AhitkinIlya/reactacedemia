@@ -13,7 +13,7 @@ export default class App extends Component {
                 <>
                     <Route path='/' exact component={BestPage}/>
                     <Route path='/coffee' component={CoffeePage}/>
-                    <Route path='/goods' component={PleasurePage}/>
+                    <Route path='/forYourPleasure' component={PleasurePage}/>
                     <Footer/>
                 </>
             </Router>

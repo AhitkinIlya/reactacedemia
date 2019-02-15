@@ -11,13 +11,14 @@ export default class ItemList extends Component {
 
     componentDidMount() {
         const {getData} = this.props
-        getData() // or this.getDB.getGoods
+        getData()
             .then((listItems) => {
                 this.setState({
                     listItems
                 })
             })
     }
+
 
     renderList(arr) {
         return arr.map((item) => {
@@ -41,7 +42,7 @@ export default class ItemList extends Component {
         if(!listItems) {
             return null
         }
-        const items = this.renderList(listItems)
+        const items = this.props.coffePage ? this.renderList(this.props.visibleItem(listItems)) : this.renderList(listItems)
         return (
             <div className="containerList">
                 <div className="itemList">

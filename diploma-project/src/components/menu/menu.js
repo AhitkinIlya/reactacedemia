@@ -6,7 +6,7 @@ const Menu = ({color}) => {
         <div className="menu">
             <Link to='/'><img src={`${/logo/}${color}`} alt="зерно"/>Coffee house</Link>
             <Link to='/coffee/'>Our coffee</Link>
-            <Link to='/goods'>For your pleasure</Link>
+            <Link to='/forYourPleasure'>For your pleasure</Link>
         </div>
     )
 }
